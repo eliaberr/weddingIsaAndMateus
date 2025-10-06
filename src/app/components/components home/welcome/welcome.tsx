@@ -4,7 +4,7 @@ import { motion } from "motion/react";
 
 export default function Welcome() {
   return (
-    <div id="home" className="overflow-hidden">
+    <div id="home" className="overflow-hidden relative">
       <motion.div
         className="bg-[url('/assets/backgraundWelcome.jpg')] bg-cover bg-center h-screen w-full relative overflow-hidden "
         initial={{ opacity: 0, scale: 1.05 }}
@@ -17,7 +17,7 @@ export default function Welcome() {
         animate={{ opacity: 1, scale: 1 }}
         transition={{ duration: 4, delay:4 }}
       >
-        <h1 className="text-[55px] font-avoda w-screen md:text-8xl lg:w-full">
+        <h1 className="text-[55px] font-avoda w-screen md:text-8xl">
           Izabelly & Matheus
         </h1>
         <span className="text-base lg:text-3xl">16/11/25</span>

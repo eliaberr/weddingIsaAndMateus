@@ -17,7 +17,7 @@ export default function buttonChoosesHowToGift({
       <Button onClick={() => chosenGift("buyTheGifts")}>
         Comprar no site Escolhido e Levar no dia
       </Button>
-      <Button onClick={() => chosenGift("PixGift")}>
+      <Button onClick={() => chosenGift("takeTheGiftOnTheDay")}>
         levar presente no dia
       </Button>
     </div>

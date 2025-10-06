@@ -6,7 +6,7 @@ import { CardLocation } from "./cardLocation";
 
 export default function InformationWedding() {
   return (
-    <div className="my-20 text-center px-2 lg:px-0 overflow-hidden lg:desktop">
+    <div id="informationWedding" className="my-20 text-center px-2 lg:px-0 overflow-hidden lg:desktop">
       <motion.div
         initial={{ opacity: 0, scale: 1.2 }}
         whileInView={{ opacity: 1, scale: 1 }}

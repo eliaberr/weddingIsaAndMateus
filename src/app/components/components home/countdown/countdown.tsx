@@ -13,6 +13,7 @@ export function Countdown() {
       whileInView={{ opacity: 1 }}
       transition={{ duration: 3 }}
       viewport={{ once: true, amount: 0.1 }}
+      id="countdown"
     >
       <h2 className="mb-5 uppercase">Contagem para o nosso grande dia</h2>
       <FlipClockCountdown

@@ -1,12 +1,13 @@
 "use client";
 
 import { MdClose } from "react-icons/md";
-import InfoProductModalGift from "./infroProductModalGift";
+import InfoProductModalGift from "./infoProductModalGift";
 import { useState } from "react";
 import ConfirmGift from "./confirmGift";
 import ButtonChoosesHowToGift from "./buttonChoosesHowToGift";
 import PixGift from "./giftMethods/pixGift";
 import BuyTheGifts from "./giftMethods/buyTheGifts";
+import TakeTheGiftOnTheDay from "./giftMethods/takeTheGiftOnTheDay";
 
 export default function Modal({ onClick }: { onClick: () => void }) {
   const [openOption, setOpenOption] = useState("InfoProductModalGift");
@@ -33,6 +34,8 @@ export default function Modal({ onClick }: { onClick: () => void }) {
           <PixGift />
         ) : openOption === "buyTheGifts" ? (
           <BuyTheGifts />
+        ) : openOption === "takeTheGiftOnTheDay" ? (
+          <TakeTheGiftOnTheDay />
         ) : null}
       </div>
     </div>

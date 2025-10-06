@@ -2,19 +2,19 @@ export function OptionNavBar() {
   const infoMenu = [
     {
       name: "Home",
-      link: "",
+      link: "#Welcome",
     },
     {
       name: "Nossa História",
-      link: "",
+      link: "#countdown",
     },
     {
       name: "Informações do Casamento",
-      link: "",
+      link: "#informationWedding",
     },
     {
       name: "Confirmar Presença",
-      link: "",
+      link: "#confirmAttendance",
     },
   ];
   return (

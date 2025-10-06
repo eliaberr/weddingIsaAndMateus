@@ -4,6 +4,7 @@ import Button from "@/app/components/ui/ux/button";
 import { createStaticPix, hasError } from "pix-utils";
 import { useEffect, useState } from "react";
 import { QRCodeCanvas } from "qrcode.react";
+import GiftConfirmationMessage from "./giftConfirmationMessage";
 
 export default function PixGift() {
   const [pixCode, setPixCode] = useState("");
@@ -46,19 +47,10 @@ export default function PixGift() {
 
   return (
     <div className="gap-2 flex flex-col justify-center">
-      <div className="mb-4 leading-none">
-        <h2 className="font-semibold uppercase text-center text-xl md:text-2xl">
-          Presente confirmado ✅
-        </h2>
-        <p className="text-center text-[12px] md:text-sm">
-          Pague via PIX nas próximas 48 horas para garantir o presente.
-        </p>
-      </div>
-
+      <GiftConfirmationMessage menssage="Pague via PIX nas próximas 48 horas para garantir o presente." />
       <h3 className="font-medium text-center">
         Para presentear com pix, copie o código abaixo ou utilize o QR Code
       </h3>
-
       <div>
         <QRCodeCanvas value={pixCode} size={200} className="m-auto mb-5" />
         <div className="border text-center rounded p-2 overflow-y-auto whitespace-pre-wrap break-words">

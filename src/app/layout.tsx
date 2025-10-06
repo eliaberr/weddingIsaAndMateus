@@ -38,13 +38,9 @@ export default function RootLayout({
       className={`${montserrat.variable} ${geistSans.variable} ${geistMono.variable}`}
     >
       <body className="font-sans antialiased">
-        <header>
-          <NavBar />
-        </header>
-        <main>{children}</main>
-        <footer className="overflow-hidden">
-          <Footer />
-        </footer>
+        <NavBar />
+        {children}
+        <Footer />
       </body>
     </html>
   );

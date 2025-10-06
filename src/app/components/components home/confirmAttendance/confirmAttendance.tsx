@@ -11,6 +11,7 @@ export default function ConfirmAttendance() {
       transition={{ duration: 3 }}
       viewport={{ once: true, amount: 0.1 }}
       className="my-20 text-center desktop"
+      id="confirmAttendance"
     >
       <h2 className="font-medium text-2xl">Confirmação de Presença</h2>
       <p className="mt-4 uppercase text-sm">

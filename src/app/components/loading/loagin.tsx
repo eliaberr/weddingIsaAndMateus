@@ -14,7 +14,7 @@ export default function Loading({ children }: { children?: React.ReactNode }) {
 
   return (
     <div
-      className={`relative h-screen w-full ${
+      className={`relative h-screen w-full lg:h-full ${
         showLoader ? "overflow-hidden" : ""
       }`}
     >

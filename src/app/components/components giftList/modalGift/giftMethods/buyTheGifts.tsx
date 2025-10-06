@@ -1,8 +1,12 @@
 import Button from "@/app/components/ui/ux/button";
+import GiftConfirmationMessage from "./giftConfirmationMessage";
 
 export default function BuyTheGifts() {
   return (
     <div>
+      <GiftConfirmationMessage
+        menssage="Compre o presente pelo link abaixo e leve no dia da festa"
+      />
       <h3 className="font-medium text-center">
         Acesse o link para comparar o presente:
       </h3>
@@ -15,7 +19,7 @@ export default function BuyTheGifts() {
             )
           }
         >
-          Clike aqui compar o presente
+          Clique aqui para comprar o presente
         </Button>
       </div>
     </div>
