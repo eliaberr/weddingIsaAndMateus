@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import { motion } from "framer-motion";
-import { CardLocation } from "../informationWedding/cardLocation";
+import { CardLocation } from "./cardLocation";
 
 export default function InformationWedding() {
   return (
