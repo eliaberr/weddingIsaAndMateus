@@ -9,7 +9,7 @@ import PixGift from "./giftMethods/pixGift";
 import BuyTheGifts from "./giftMethods/buyTheGifts";
 import TakeTheGiftOnTheDay from "./giftMethods/takeTheGiftOnTheDay";
 
-export default function Modal({ onClick }: { onClick: () => void }) {
+export default function Modal({ gift, onClick}: {gift: Gift ,  onClick: () => void }) {
   const [openOption, setOpenOption] = useState("InfoProductModalGift");
 
   return (
@@ -23,15 +23,19 @@ export default function Modal({ onClick }: { onClick: () => void }) {
         </button>
 
         {openOption === "InfoProductModalGift" ? (
-          <InfoProductModalGift onClick={() => setOpenOption("ConfirmGift")} />
+          <InfoProductModalGift
+            gift={gift}
+            onClick={() => setOpenOption("ConfirmGift")}
+          />
         ) : openOption === "ConfirmGift" ? (
           <ConfirmGift
             setState={() => setOpenOption("buttonChoosesHowToGift")}
+            id={gift.id}
           />
         ) : openOption === "buttonChoosesHowToGift" ? (
           <ButtonChoosesHowToGift setState={setOpenOption} />
         ) : openOption === "PixGift" ? (
-          <PixGift />
+          <PixGift gift={gift} />
         ) : openOption === "buyTheGifts" ? (
           <BuyTheGifts />
         ) : openOption === "takeTheGiftOnTheDay" ? (

@@ -6,7 +6,7 @@ import { useEffect, useState } from "react";
 import { QRCodeCanvas } from "qrcode.react";
 import GiftConfirmationMessage from "./giftConfirmationMessage";
 
-export default function PixGift() {
+export default function PixGift({ gift }: { gift: Gift }) {
   const [pixCode, setPixCode] = useState("");
   const [copied, setCopied] = useState<boolean | null>(null);
 
@@ -15,8 +15,8 @@ export default function PixGift() {
       merchantName: "Izabelly Ramos",
       merchantCity: "Itu",
       pixKey: "Izabellyramosr@gmail.com",
-      infoAdicional: "Gerado por Pix-Utils",
-      transactionAmount: 500.0,
+      infoAdicional: gift.name,
+      transactionAmount: gift.price,
     });
     if (!hasError(pix)) {
       const brCode = pix.toBRCode();
