@@ -8,7 +8,9 @@ export default function GithCardList() {
 
   useEffect(() => {
     const fetchGifts = async () => {
-      const response = await fetch("http://localhost:3001/presentes");
+      const response = await fetch(
+        "prjcasamentobackend-production.up.railway.app/presentes"
+      );
       const data = await response.json();
 
       const normalized: Gift[] = Array.isArray(data) ? data : [data];
