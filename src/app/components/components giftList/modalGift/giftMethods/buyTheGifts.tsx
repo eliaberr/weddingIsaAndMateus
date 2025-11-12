@@ -1,11 +1,13 @@
 import Button from "@/app/components/ui/ux/button";
 import GiftConfirmationMessage from "./giftConfirmationMessage";
 
-export default function BuyTheGifts() {
+export default function BuyTheGifts({ url }: { url: string }) {
   return (
     <div>
       <GiftConfirmationMessage menssage="Compre o presente pelo link abaixo e leve no dia da festa" />
-      <h2 className="font-medium text-center">Acesse o link para comprar o presente:</h2>
+      <h2 className="font-medium text-center">
+        Acesse o link para comprar o presente:
+      </h2>
 
       <div className="mt-6 text-center" aria-labelledby="gift-shipping-title">
         <h3 id="gift-shipping-title" className="text-lg font-semibold">
@@ -33,14 +35,7 @@ export default function BuyTheGifts() {
           </p>
         </address>
       </div>
-      <Button
-        onClick={() =>
-          window.open(
-            "https://www.amazon.com.br/s?k=liquidificador&__mk_pt_BR=%C3%85M%C3%85%C5%BD%C3%95%C3%91&ref=nb_sb_noss",
-            "_blank"
-          )
-        }
-      >
+      <Button onClick={() => window.open(url, "_blank")}>
         Clique aqui para comprar o presente
       </Button>
     </div>
