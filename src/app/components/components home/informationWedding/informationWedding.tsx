@@ -56,6 +56,7 @@ export default function InformationWedding() {
             por você!
           </p>
         </div>
+       
       </motion.div>
       <CardLocation />
     </div>
