@@ -5,6 +5,7 @@ import { OptionNavBar } from "./opitonNavBar";
 import { motion } from "motion/react";
 import { MenuMobile } from "./menuMobile";
 import { useEffect, useState } from "react";
+import Link from "next/link";
 
 export default function NavBar() {
   const [scrolled, setScrolled] = useState(false);
@@ -39,7 +40,10 @@ export default function NavBar() {
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 4, delay: 5, ease: "easeIn" }}
       >
-        <Image src="/assets/logo.png" width={90} height={10} alt="logo" />
+        <Link href="/" className="cursor-pointer">
+          {" "}
+          <Image src="/assets/logo.png" width={90} height={10} alt="logo" />
+        </Link>
         <div className="hidden lg:grid">
           <OptionNavBar />
         </div>

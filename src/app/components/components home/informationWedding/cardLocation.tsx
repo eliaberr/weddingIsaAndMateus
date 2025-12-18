@@ -28,12 +28,12 @@ export function CardLocation() {
       className="mt-10 px-2 text-start lg:px-0 desktop"
     >
       <h2>Escolha o aplicativo de sua preferência para abrir a localização</h2>
-      <div className="flex gap-4 mt-4">
+      <div className=" gap-4 mt-4 grid grid-cols-10">
         {infoButtons.map((button, index) => (
           <button
             key={index}
             onClick={() => openMap(button.url)}
-            className="flex justify-center items-center gap-2 w-[150px] h-10 border rounded cursor-pointer transition duration-300 hover:bg-gray-200"
+            className="flex justify-center items-center gap-2 col-span-2 h-10 border rounded cursor-pointer transition duration-300 hover:bg-gray-200"
           >
             {button.icon}
             {button.name}
