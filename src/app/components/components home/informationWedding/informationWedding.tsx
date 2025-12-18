@@ -3,6 +3,7 @@
 import Image from "next/image";
 import { motion } from "framer-motion";
 import { CardLocation } from "./cardLocation";
+import { ChooseGift } from "./chooseGift";
 
 export default function InformationWedding() {
   return (
@@ -59,6 +60,7 @@ export default function InformationWedding() {
        
       </motion.div>
       <CardLocation />
+      <ChooseGift/>
     </div>
   );
 }
