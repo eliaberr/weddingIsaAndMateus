@@ -2,7 +2,13 @@ import { useState } from "react";
 import Button from "../../ui/ux/button";
 import Cleave from "cleave.js/react";
 
-export default function ConfirmGift({ id, setState }: { id: number; setState: () => void }) {
+export default function ConfirmGift({
+  id,
+  setState,
+}: {
+  id: number;
+  setState: () => void;
+}) {
   const [telefone, setTelefone] = useState("");
 
   const validarTelefone = (numero: string) => {
@@ -17,18 +23,15 @@ export default function ConfirmGift({ id, setState }: { id: number; setState: ()
     }
 
     try {
-      const res = await fetch(`https://prj-casamento-backend.vercel.app/presentes/${id}`, {
+      const res = await fetch(`http://localhost:3001/presentes/${id}`, {
         method: "PUT",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ phone: telefone }),
       });
 
       if (!res.ok) throw new Error("Erro ao confirmar presente");
-
       const data = await res.json();
       console.log("Resposta do backend:", data);
-
-      alert("Presente confirmado com sucesso!");
       setState();
     } catch (err) {
       console.error(err);

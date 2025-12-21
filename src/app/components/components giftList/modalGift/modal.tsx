@@ -39,7 +39,7 @@ export default function Modal({ gift, onClick}: {gift: Gift ,  onClick: () => vo
         ) : openOption === "buyTheGifts" ? (
           <BuyTheGifts url={gift.url}/>
         ) : openOption === "takeTheGiftOnTheDay" ? (
-          <TakeTheGiftOnTheDay  />
+          <TakeTheGiftOnTheDay  gift={gift}/>
         ) : null}
       </div>
     </div>

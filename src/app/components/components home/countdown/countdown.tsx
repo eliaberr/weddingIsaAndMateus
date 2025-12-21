@@ -3,7 +3,6 @@
 import FlipClockCountdown from "@leenguyen/react-flip-clock-countdown";
 import "@leenguyen/react-flip-clock-countdown/dist/index.css";
 import { motion } from "motion/react";
-import HeartRain from "./heart_rain";
 
 export function Countdown() {
   return (
@@ -17,7 +16,7 @@ export function Countdown() {
     >
       <h2 className="mb-5 uppercase">Contagem para o nosso grande dia</h2>
       <FlipClockCountdown
-        to={new Date(2025, 10, 16).getTime()}
+        to={new Date(2025, 12, 25).getTime()}
         labels={["Dias", "Horas", "Minutos", "Segundos"]}
         labelStyle={{ fontSize: 10, fontWeight: 500 }}
         className="flip-clock"
@@ -26,9 +25,7 @@ export function Countdown() {
           className="text-3xl font-semibold"
           initial={{ scale: 0 }}
           animate={{ scale: 1 }}
-        >
-          <HeartRain />
-        </motion.div>
+        ></motion.div>
       </FlipClockCountdown>
     </motion.div>
   );

@@ -1,7 +1,7 @@
 import Image from "next/image";
 import GiftConfirmationMessage from "./giftConfirmationMessage";
 
-export default function TakeTheGiftOnTheDay() {
+export default function TakeTheGiftOnTheDay({ gift }: { gift: Gift }) {
   return (
     <div className="text-center flex flex-col gap-4">
       <GiftConfirmationMessage menssage="Leve seu presente no dia da festa e comemore com a gente." />
@@ -9,7 +9,7 @@ export default function TakeTheGiftOnTheDay() {
         Informações do presente
       </h2>
       <Image
-        src="/assets/image.png"
+        src={gift.urlImage || '/placeholder.jpg'}
         alt="Imagem de um liquidificador"
         width={200}
         height={200}
@@ -18,11 +18,11 @@ export default function TakeTheGiftOnTheDay() {
       <dl className="space-y-2">
         <div className="flex justify-center gap-1">
           <dt className="font-medium">Nome:</dt>
-          <dd>Liquidificador</dd>
+          <dd>{gift.name}</dd>
         </div>
         <div className="flex justify-center gap-1">
           <dt className="font-medium">Cor de preferência:</dt>
-          <dd>Preto</dd>
+          <dd>{gift.color}</dd>
         </div>
       </dl>
     </div>

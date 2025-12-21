@@ -8,7 +8,7 @@ export default function GithCardList() {
 
   useEffect(() => {
     const fetchGifts = async () => {
-      const response = await fetch("https://prj-casamento-backend.vercel.app/presentes");
+      const response = await fetch("http://localhost:3001/presentes");
       const data = await response.json();
 
       const normalized: Gift[] = Array.isArray(data) ? data : [data];
