@@ -16,7 +16,7 @@ export function Countdown() {
     >
       <h2 className="mb-5 uppercase">Contagem para o nosso grande dia</h2>
       <FlipClockCountdown
-        to={new Date(2025, 12, 25).getTime()}
+        to={new Date(202, 12, 25).getTime()}
         labels={["Dias", "Horas", "Minutos", "Segundos"]}
         labelStyle={{ fontSize: 10, fontWeight: 500 }}
         className="flip-clock"
